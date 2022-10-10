@@ -14,7 +14,7 @@ const QuizQuestion = () => {
                 </div>
                 <p className='text-xl text-center mt-2'>Total Question : {total}</p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-10'>
+            <div className='grid grid-cols-1 md:grid-cols-1 gap-8 mt-10 mb-10'>
                 {
                     questions.map(question => <SingleQuestion QuestionCart={question} key={question.id} />)
                 }
