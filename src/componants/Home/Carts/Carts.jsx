@@ -15,7 +15,6 @@ const Carts = () => {
         }
 
     }, [])
-    console.log(carts);
     return (
         <div className='w-11/12 mx-auto'>
             <h1 className='text-lg md:text-5xl mb-14 text-center font-semibold text-orange-600 underline'>Participate with...</h1>

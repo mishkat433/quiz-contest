@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Cart = ({ cart }) => {
-    const { name, logo, total } = cart;
+    const { name, logo, total, id } = cart;
     return (
         <div className='justify-center items-center flex'>
             <div className="card card-side bg-base-100 shadow-xl">
@@ -11,7 +12,7 @@ const Cart = ({ cart }) => {
                     <p className='font-semibold'>Total Question : {total}</p>
                     <p className=''>Try to understand all the answers (Be carefull)</p>
                     <div className=" justify-start">
-                        <button className="btn btn-primary">Start Quiz</button>
+                        <Link to={`/cart/${id}`} className="btn btn-warning hover:btn-success">Start Quiz</Link>
                     </div>
                 </div>
             </div>
