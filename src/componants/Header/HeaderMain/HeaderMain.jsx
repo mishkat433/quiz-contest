@@ -8,7 +8,7 @@ const HeaderMain = () => {
                 <img className='w-3/5' src={winnerImage} alt="" />
             </div>
             <div className='w-1/2 text-center'>
-                <h1 className='text-5xl font-semibold mb-5'>World Quiz Contest</h1>
+                <h1 className='text-5xl font-semibold mb-5 text-orange-600'>World Quiz Contest</h1>
                 <p className=' text-lg '>World Quiz Contest is an international Quiz contest, This quiz will be based on computer program. Big programmers from different countries will participate in this quiz. So welcome to participate with a winning attitude. </p>
             </div>
         </div>
