@@ -28,7 +28,7 @@ const Carts = () => {
     }, [])
     return (
         <div className='w-11/12 mx-auto' >
-            <h1 className='text-lg md:text-5xl mb-14 text-center font-semibold text-orange-600 '>Participate with...</h1>
+            <h1 className='text-4xl md:text-5xl mb-14 text-center font-semibold text-orange-600 '>Participate with...</h1>
             <ClipLoader
                 loading={loading}
                 cssOverride={override}
