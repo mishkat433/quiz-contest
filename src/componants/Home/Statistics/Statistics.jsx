@@ -3,15 +3,15 @@ import { useLoaderData } from 'react-router-dom';
 import { CartesianGrid, Legend, Tooltip, XAxis, YAxis, LineChart, Line, ResponsiveContainer } from 'recharts';
 
 const Statistics = () => {
-    const loadData = useLoaderData()
-    const [data, setData] = useState([])
+    const loadData = useLoaderData();
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         let data = []
         for (const one of loadData.data) {
-            data.push(one)
+            data.push(one);
         }
-        setData(data)
+        setData(data);
     }, [loadData])
 
     return (

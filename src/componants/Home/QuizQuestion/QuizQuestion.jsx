@@ -19,18 +19,17 @@ const QuizQuestion = () => {
             </div>
 
             <div className='flex flex-col-reverse lg:flex-row justify-between  gap-8 mb-10'>
-                <div className='grid grid-cols-1 md:grid-cols-1 gap-8 mt-10 mb-10 w-9/12'>
+                <div className='grid grid-cols-1 md:grid-cols-1 gap-8  mb-10 w-full lg:w-9/12'>
                     {
                         questions.map(question => <SingleQuestion QuestionCart={question} key={question.id}
                             correctAns={correctAns} setCorrectAns={setCorrectAns} inCorrectAns={inCorrectAns} setInCorrectAns={setInCorrectAns} />)
                     }
                 </div>
-                <div className='lg:w-3/12 bg-white  lg:sticky top-0 right-0 lg:h-[100vh] p-2'>
+                <div className='lg:w-3/12 bg-white lg:rounded-xl lg:sticky top-0 right-0 lg:h-[100vh] p-2'>
                     <h1 className='text-4xl mt-10 text-center text-orange-600 mb-3 font-semibold'>Results</h1>
                     <hr className=' border-orange-600 ' />
-                    <h4 className='mt-5 text-center text-xl'>Correct Answer : {correctAns}</h4>
-                    <h4 className='mt-5 text-center text-xl pb-4'>Wrong Answer : {inCorrectAns}</h4>
-
+                    <h4 className='mt-5 text-center text-xl text-green-500'>Correct Answer : {correctAns}</h4>
+                    <h4 className='mt-5 text-center text-xl pb-4 text-red-500'>Wrong Answer : {inCorrectAns}</h4>
                 </div>
             </div>
         </div>

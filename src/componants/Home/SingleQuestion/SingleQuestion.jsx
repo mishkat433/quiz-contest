@@ -16,9 +16,7 @@ const SingleQuestion = ({ QuestionCart, correctAns, setCorrectAns, inCorrectAns,
     }
 
     const checkedHandle = (check) => {
-
         setdisable(true)
-
         if (correctAnswer === check) {
             Swal.fire(
                 'Answer is correct',
@@ -37,22 +35,19 @@ const SingleQuestion = ({ QuestionCart, correctAns, setCorrectAns, inCorrectAns,
 
     return (
         <div >
-            <div className="card card-side bg-white shadow-xl p-2 md:p-4 flex flex-col md:flex-row justify-between items-center px-4 text-lg h-full">
+            <div className="card card-side bg-white shadow-xl p-2 md:px-4 flex flex-col md:flex-row justify-between items-center px-4 text-lg h-full">
                 <div className='md:w-2/5'>
                     <h3 className='font-semibold text-2xl'>Question : </h3>
                     <h3>{question}</h3>
-                    {/* <h1> corr : {correctAns}</h1> */}
                     <FontAwesomeIcon className='cursor-pointer mt-5 text-center w-full text-2xl text-orange-700' title='see answer' icon={faEye} onClick={() => showAnswerHandle(correctAnswer)} />
                 </div>
-                <div className="card-body w-full md:w-3/5" aria-readonly={true}>
+                <div className="card-body w-full md:w-3/5" >
                     {
                         options.map((option, unique) => <Option selectedOption={option} key={unique}
                             disable={disable} checkedHandle={checkedHandle} />)
                     }
-
                 </div>
             </div>
-
         </div>
     );
 };
