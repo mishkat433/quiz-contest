@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
-import React, { useState } from 'react';
 import Swal from 'sweetalert2'
 import Option from '../Option/Option';
+import { useState } from 'react';
 
-const SingleQuestion = ({ QuestionCart, correctAns, setCorrectAns }) => {
+const SingleQuestion = ({ QuestionCart, correctAns, setCorrectAns, inCorrectAns, setInCorrectAns }) => {
     const { question, correctAnswer, options } = QuestionCart;
-
+    const [disable, setdisable] = useState(false)
 
     const showAnswerHandle = () => {
         Swal.fire(
@@ -17,20 +17,21 @@ const SingleQuestion = ({ QuestionCart, correctAns, setCorrectAns }) => {
 
     const checkedHandle = (check) => {
 
+        setdisable(true)
 
         if (correctAnswer === check) {
             Swal.fire(
                 'Your Answer is correct',
             );
-            setCorrectAns([...correctAns, check])
+            setCorrectAns(correctAns + 1)
         }
         else {
             Swal.fire(
                 'Your answer is not correct, currect answer is :',
                 correctAnswer,
             );
+            setInCorrectAns(inCorrectAns + 1)
         }
-        // console.log(correctAns);
     }
 
 
@@ -45,7 +46,7 @@ const SingleQuestion = ({ QuestionCart, correctAns, setCorrectAns }) => {
                 </div>
                 <div className="card-body w-3/5" aria-readonly={true}>
                     {
-                        options.map((option, unique) => <Option selectedOption={option} key={unique} checkedHandle={checkedHandle} />)
+                        options.map((option, unique) => <Option selectedOption={option} key={unique} disable={disable} checkedHandle={checkedHandle} />)
                     }
 
                 </div>

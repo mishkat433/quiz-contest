@@ -6,6 +6,7 @@ import NotFound from './componants/NotFound/NotFound';
 import Main from './Layout/Main';
 
 const App = () => {
+
   const router = createBrowserRouter([
     {
       path: "/",
