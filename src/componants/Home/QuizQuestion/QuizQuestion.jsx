@@ -4,6 +4,7 @@ import SingleQuestion from '../SingleQuestion/SingleQuestion';
 
 const QuizQuestion = () => {
     const showQuestion = useLoaderData();
+    console.log(showQuestion);
     const { name, questions, total, logo } = showQuestion.data;
     const [correctAns, setCorrectAns] = useState(0);
     const [inCorrectAns, setInCorrectAns] = useState(0);

@@ -21,7 +21,7 @@ const SingleQuestion = ({ QuestionCart, correctAns, setCorrectAns, inCorrectAns,
 
         if (correctAnswer === check) {
             Swal.fire(
-                'Your Answer is correct',
+                'Answer is correct',
             );
             setCorrectAns(correctAns + 1)
         }
