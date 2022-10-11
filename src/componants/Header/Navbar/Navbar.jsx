@@ -21,9 +21,9 @@ const Navbar = () => {
                         <div className={`${bar ? "block absolute lg:static top-16  text-center px-3 pb-2 right-0 w-full bg-sky-600" : "hidden"} lg:block `}>
                             <ul className=" lg:flex lg:flex-row gap-8 text-gray-200 text-md lg:text-lg" onClick={() => setBar(false)}>
                                 <li className='hover:text-white duration-300 mb-3 lg:mb-0'><NavLink className={({ isActive }) => isActive ? "bg-white px-2 py-1 rounded-md  text-black" : undefined} to='/home'>Home</NavLink></li>
-                                <li className='hover:text-white duration-300 mb-3 lg:mb-0'><NavLink className={({ isActive }) => isActive ? "bg-white px-2 py-1 rounded-md  text-black" : undefined} to='/order'>quiz</NavLink></li>
-                                <li className='hover:text-white duration-300 mb-3 lg:mb-0'><NavLink className={({ isActive }) => isActive ? "bg-white px-2 py-1 rounded-md  text-black" : undefined} to='/inventory'>quiz`</NavLink></li>
-                                <li className='hover:text-white duration-300 mb-3 lg:mb-0'><NavLink to='/'>Blog</NavLink></li>
+                                <li className='hover:text-white duration-300 mb-3 lg:mb-0'><NavLink className={({ isActive }) => isActive ? "bg-white px-2 py-1 rounded-md  text-black" : undefined} to='/topics'>Topics</NavLink></li>
+                                <li className='hover:text-white duration-300 mb-3 lg:mb-0'><NavLink className={({ isActive }) => isActive ? "bg-white px-2 py-1 rounded-md  text-black" : undefined} to='/inventory'>Statistics</NavLink></li>
+                                <li className='hover:text-white duration-300 mb-3 lg:mb-0'><NavLink className={({ isActive }) => isActive ? "bg-white px-2 py-1 rounded-md  text-black" : undefined} to='/blog'>Blog</NavLink></li>
                             </ul>
                         </div>
                     </div>
