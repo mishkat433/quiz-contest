@@ -27,7 +27,7 @@ const SingleQuestion = ({ QuestionCart, correctAns, setCorrectAns, inCorrectAns,
         }
         else {
             Swal.fire(
-                'Your answer is not correct, currect answer is :',
+                'Your answer is not correct, correct answer is :',
                 correctAnswer,
             );
             setInCorrectAns(inCorrectAns + 1)
@@ -42,11 +42,12 @@ const SingleQuestion = ({ QuestionCart, correctAns, setCorrectAns, inCorrectAns,
                     <h3 className='font-semibold text-2xl'>Question : </h3>
                     <h3>{question}</h3>
                     {/* <h1> corr : {correctAns}</h1> */}
-                    <FontAwesomeIcon className='cursor-pointer mt-5 text-center w-full text-2xl text-orange-700' title='show answer' icon={faEye} onClick={() => showAnswerHandle(correctAnswer)} />
+                    <FontAwesomeIcon className='cursor-pointer mt-5 text-center w-full text-2xl text-orange-700' title='see answer' icon={faEye} onClick={() => showAnswerHandle(correctAnswer)} />
                 </div>
                 <div className="card-body w-3/5" aria-readonly={true}>
                     {
-                        options.map((option, unique) => <Option selectedOption={option} key={unique} disable={disable} checkedHandle={checkedHandle} />)
+                        options.map((option, unique) => <Option selectedOption={option} key={unique}
+                            disable={disable} checkedHandle={checkedHandle} />)
                     }
 
                 </div>

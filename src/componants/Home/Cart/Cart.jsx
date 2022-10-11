@@ -12,7 +12,7 @@ const Cart = ({ cart }) => {
                     <p className='font-semibold'>Total Question : {total}</p>
                     <p className=''>Try to understand all the answers (Be carefull)</p>
                     <div className=" justify-start">
-                        <Link to={`/cart/${id}`} className="btn btn-warning hover:btn-success">Start Quiz</Link>
+                        <Link to={`/quiz/${id}`} className="btn btn-warning hover:btn-success">Start Quiz</Link>
                     </div>
                 </div>
             </div>
