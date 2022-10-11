@@ -17,10 +17,9 @@ const QuizQuestion = () => {
                 </div>
                 <p className='text-xl text-center mt-2'>Total Question : {total}</p>
             </div>
+
             <div className='flex flex-col-reverse lg:flex-row justify-between  gap-8 mb-10'>
-
-
-                <div className='grid grid-cols-1 md:grid-cols-1 gap-8 mt-10 mb-10'>
+                <div className='grid grid-cols-1 md:grid-cols-1 gap-8 mt-10 mb-10 w-9/12'>
                     {
                         questions.map(question => <SingleQuestion QuestionCart={question} key={question.id}
                             correctAns={correctAns} setCorrectAns={setCorrectAns} inCorrectAns={inCorrectAns} setInCorrectAns={setInCorrectAns} />)

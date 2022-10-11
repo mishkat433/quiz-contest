@@ -7,11 +7,11 @@ const Statistics = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        let ss = []
+        let data = []
         for (const one of loadData.data) {
-            ss.push(one)
+            data.push(one)
         }
-        setData(ss)
+        setData(data)
     }, [loadData])
 
     return (

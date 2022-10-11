@@ -4,6 +4,7 @@ import Blog from './componants/Home/Blog/Blog';
 import Home from './componants/Home/Home/Home';
 import QuizQuestion from './componants/Home/QuizQuestion/QuizQuestion';
 import Statistics from './componants/Home/Statistics/Statistics';
+import Topics from './componants/Home/Topics/Topics';
 import NotFound from './componants/NotFound/NotFound';
 import Main from './Layout/Main';
 
@@ -22,6 +23,10 @@ const App = () => {
         {
           path: "/home",
           element: <Home />
+        },
+        {
+          path: "/topics",
+          element: <Topics />
         },
         {
           path: "/quiz/:id",
