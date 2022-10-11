@@ -31,9 +31,7 @@ const QuizQuestion = () => {
                 <hr className=' border-orange-600 ' />
                 <h4 className='mt-5 text-center text-xl'>Correct Answer : {correctAns}</h4>
                 <h4 className='mt-5 text-center text-xl'>Wrong Answer : {inCorrectAns}</h4>
-                <div className='flex justify-center mt-10'>
-                    <button className="btn btn-outline btn-error w-full">Restart Quiz</button>
-                </div>
+
             </div>
         </div>
     );
